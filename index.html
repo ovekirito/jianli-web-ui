@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="陈奕帆的个人简历单页网站，展示项目经历、职业经历与联系方式。">
+  <meta name="keywords" content="陈奕帆, 个人简历, 新媒体运营, HSE, 安全管理, 项目统筹">
+  <meta name="author" content="陈奕帆">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#FFF8F0">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="陈奕帆 | 个人简历">
+  <meta property="og:description" content="新媒体运营 · HSE 安全管理与项目统筹，擅长内容策划、培训宣导、政企沟通与数据化运营。">
+  <meta property="og:site_name" content="陈奕帆个人简历">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="陈奕帆 | 个人简历">
+  <meta name="twitter:description" content="新媒体运营 · HSE 安全管理与项目统筹，擅长内容策划、培训宣导、政企沟通与数据化运营。">
+  <title>陈奕帆 | 个人简历</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=hero-typography">
+</head>
+<body>
+  <header class="site-header" id="site-header">
+    <nav class="site-nav" aria-label="主导航">
+      <a class="brand" href="#home" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" role="img">
+            <path d="M24 6L43 39H5L24 6Z"></path>
+          </svg>
+        </span>
+        <span class="brand-text">Resume</span>
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="打开导航菜单" aria-controls="primary-nav" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-list" id="primary-nav">
+        <li><a class="nav-link is-active" href="#home" data-section="home"><span></span>首页</a></li>
+        <li><a class="nav-link" href="#projects" data-section="projects"><span></span>项目</a></li>
+        <li><a class="nav-link" href="#experience" data-section="experience"><span></span>经历</a></li>
+        <li><a class="nav-link" href="#contact" data-section="contact"><span></span>联系方式</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-block" id="home" data-section="home" aria-label="首页">
+      <div class="floating-shapes" aria-hidden="true">
+        <span class="float-shape float-shape-triangle"></span>
+        <span class="float-shape float-shape-circle"></span>
+        <span class="float-shape float-shape-diamond"></span>
+        <span class="float-shape float-shape-inverted"></span>
+      </div>
+
+      <div class="hero-inner fade-target" id="hero-content"></div>
+
+      <a class="scroll-cue" href="#summary" aria-label="滚动到个人总结">
+        <svg viewBox="0 0 44 44" aria-hidden="true">
+          <path d="M22 33L7 12H37L22 33Z"></path>
+        </svg>
+      </a>
+    </section>
+
+    <section class="summary-section section-block" id="summary" data-section="summary" aria-labelledby="summary-title">
+      <div class="summary-background" aria-hidden="true"></div>
+      <div class="summary-grid-lines" aria-hidden="true"></div>
+      <div class="summary-layout">
+        <div class="summary-copy fade-target" id="summary-copy"></div>
+        <div class="summary-stat-panel fade-target" id="summary-stat-panel"></div>
+      </div>
+    </section>
+
+    <section class="projects-section section-block" id="projects" data-section="projects" aria-labelledby="projects-title">
+      <div class="section-inner">
+        <div class="section-heading fade-target">
+          <span class="section-kicker">✦ Portfolio</span>
+          <h2 id="projects-title">项目</h2>
+          <p>精选项目经历与安全管理实践，聚焦统筹推进、风险治理与合规落地。</p>
+        </div>
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+
+    <section class="experience-section section-block" id="experience" data-section="experience" aria-labelledby="experience-title">
+      <div class="section-inner">
+        <div class="section-heading section-heading-light fade-target">
+          <span class="section-kicker career-kicker">✦ Career</span>
+          <h2 id="experience-title">经历</h2>
+          <p>从一线项目到部门统筹，持续沉淀标准化管理、培训宣导与跨部门协作能力。</p>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </div>
+    </section>
+
+    <section class="contact-section section-block" id="contact" data-section="contact" aria-labelledby="contact-title">
+      <div class="section-inner">
+        <div class="section-heading contact-heading fade-target">
+          <span class="section-kicker">保持联系</span>
+          <h2 id="contact-title">期待与你聊聊</h2>
+          <p>如果你正在寻找一位懂项目统筹、擅长培训宣导与内容表达、能把复杂事务推进落地的运营人——我们可以约个电话慢慢聊。</p>
+        </div>
+        <div class="contact-panel" id="contact-panel"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-diamond" aria-hidden="true"></div>
+    <p id="footer-copy"></p>
+  </footer>
+
+  <script src="resume-data.js"></script>
+  <script>
+    (function () {
+      const data = resumeData;
+      const header = document.getElementById('site-header');
+      const navToggle = document.getElementById('nav-toggle');
+      const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+      const sections = Array.from(document.querySelectorAll('main section[id]'));
+
+      function escapeHtml(value) {
+        return String(value || '').replace(/[&<>"']/g, function (char) {
+          return {
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+          }[char];
+        });
+      }
+
+      function setMeta(selector, content) {
+        const tag = document.querySelector(selector);
+        if (tag) {
+          tag.setAttribute('content', content);
+        }
+      }
+
+      function updateSeo() {
+        const title = `${data.hero.name} | 个人简历`;
+        const description = `${data.hero.name}，${data.hero.title}。${data.hero.subtitle}`;
+        document.title = title;
+        setMeta('meta[name="description"]', description);
+        setMeta('meta[name="author"]', data.hero.name);
+        setMeta('meta[property="og:title"]', title);
+        setMeta('meta[property="og:description"]', description);
+        setMeta('meta[name="twitter:title"]', title);
+        setMeta('meta[name="twitter:description"]', description);
+      }
+
+      function renderHero() {
+        const hero = data.hero;
+        const resume = data.resume || {};
+        const resumeFile = resume.file || '';
+        const resumeFilename = resume.filename || `${hero.name}-个人简历.pdf`;
+        const avatarMarkup = hero.avatar
+          ? `<img class="hero-avatar" src="${escapeHtml(hero.avatar)}" alt="${escapeHtml(hero.name)} 的头像">`
+          : '';
+        const displayTitle = hero.title
+          ? String(hero.title).replace(/^新媒体运营\s*[·・•\-|]\s*/, '').trim()
+          : '';
+        const titleMarkup = displayTitle
+          ? `<p class="hero-title">${escapeHtml(displayTitle)}</p>`
+          : '';
+        const subtitleSegments = hero.subtitle
+          ? String(hero.subtitle).split('/').map(function (part) {
+              return part.trim();
+            }).filter(function (part) {
+              return part && !/^期望城市/.test(part);
+            })
+          : [];
+        const subtitleMarkup = subtitleSegments.length
+          ? `<p class="hero-subtitle">${subtitleSegments.map(function (part) {
+              return `<span>${escapeHtml(part)}</span>`;
+            }).join('')}</p>`
+          : '';
+        const honorsMarkup = Array.isArray(hero.honors) && hero.honors.length
+          ? `<div class="hero-honors" aria-label="成绩荣誉">
+              <span class="hero-honors-label">成绩荣誉</span>
+              <ul>${hero.honors.map(function (honor) {
+                return `<li><span>${escapeHtml(honor)}</span></li>`;
+              }).join('')}</ul>
+            </div>`
+          : '';
+        const downloadMarkup = resumeFile
+          ? `<a class="hero-action hero-action-primary" href="${escapeHtml(resumeFile)}" download="${escapeHtml(resumeFilename)}">下载简历</a>`
+          : '';
+
+        document.getElementById('hero-content').innerHTML = `
+          ${avatarMarkup}
+          <h1>${escapeHtml(hero.name)}</h1>
+          ${titleMarkup}
+          ${subtitleMarkup}
+          <div class="diamond-divider" aria-hidden="true">
+            <span></span>
+            <i></i>
+            <span></span>
+          </div>
+          ${honorsMarkup}
+          <div class="hero-actions">
+            ${downloadMarkup}
+            <a class="hero-action hero-action-secondary" href="#contact">联系我</a>
+          </div>
+        `;
+      }
+
+      function renderHighlight(value) {
+        const text = String(value || '');
+        const match = text.match(/(.*?)(\d+\+?)(.*)/);
+
+        if (!match) {
+          return `<span>${escapeHtml(text)}</span>`;
+        }
+
+        return `
+          <span>${escapeHtml(match[1])}</span>
+          <strong>${escapeHtml(match[2])}</strong>
+          <span>${escapeHtml(match[3])}</span>
+        `;
+      }
+
+      function renderSummary() {
+        const hero = data.hero;
+        const highlights = Array.isArray(hero.highlights) ? hero.highlights : [];
+        const primaryHighlight = highlights[0] ? renderHighlight(highlights[0]) : '';
+        const remainingHighlights = highlights.slice(1).map(function (item) {
+          return `<li>${renderHighlight(item)}</li>`;
+        }).join('');
+
+        document.getElementById('summary-copy').innerHTML = `
+          <span class="summary-kicker">PROFILE · 个人总结</span>
+          <h2 id="summary-title">把复杂事务<br>推进落地</h2>
+          <p>${escapeHtml(hero.summary || '')}</p>
+          <div class="summary-actions">
+            <a href="#projects">查看项目经历</a>
+            <a href="#experience">查看职业经历</a>
+          </div>
+        `;
+
+        document.getElementById('summary-stat-panel').innerHTML = `
+          <div class="summary-main-stat">${primaryHighlight}</div>
+          <ul class="summary-stat-list">${remainingHighlights}</ul>
+        `;
+      }
+
+      function renderProjects() {
+        const grid = document.getElementById('projects-grid');
+        grid.innerHTML = data.projects.map(function (project, index) {
+          const tags = project.tags.map(function (tag) {
+            return `<span class="tech-tag">${escapeHtml(tag)}</span>`;
+          }).join('');
+
+          return `
+            <article class="project-card fade-target" style="--delay: ${index * 90}ms;">
+              <div class="project-card-tilt">
+                <div class="project-content">
+                  <h3>${escapeHtml(project.name)}</h3>
+                  <p>${escapeHtml(project.description)}</p>
+                  <div class="tech-list" aria-label="技术标签">${tags}</div>
+                </div>
+              </div>
+            </article>
+          `;
+        }).join('');
+      }
+
+      function renderExperience() {
+        const timeline = document.getElementById('timeline');
+        timeline.innerHTML = data.experience.map(function (item, index) {
+          return `
+            <article class="timeline-item fade-target" style="--delay: ${index * 110}ms;">
+              <div class="timeline-marker" aria-hidden="true">
+                <svg class="timeline-diamond" viewBox="0 0 24 24">
+                  <rect x="6" y="6" width="12" height="12" transform="rotate(45 12 12)"></rect>
+                </svg>
+              </div>
+              <div class="timeline-card">
+                <span class="period-tag">${escapeHtml(item.period)}</span>
+                <h3>${escapeHtml(item.company)}</h3>
+                <p class="timeline-role">${escapeHtml(item.role)}</p>
+                <p class="timeline-desc">${escapeHtml(item.description)}</p>
+              </div>
+            </article>
+          `;
+        }).join('');
+      }
+
+      function contactHref(key, value) {
+        if (!value) {
+          return '';
+        }
+
+        if (key === 'email') {
+          return `mailto:${value}`;
+        }
+
+        if (key === 'phone') {
+          return `tel:${value.replace(/\s+/g, '')}`;
+        }
+
+        if (key === 'github' || key === 'linkedin') {
+          return value.indexOf('http') === 0 ? value : `https://${value}`;
+        }
+
+        return '';
+      }
+
+      function contactIcon(type) {
+        const icons = {
+          phone: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.77.59 2.61a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.47-1.16a2 2 0 0 1 2.11-.45c.84.27 1.71.47 2.61.59A2 2 0 0 1 22 16.92Z"></path></svg>',
+          email: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"></path><path d="m22 7-10 7L2 7"></path></svg>',
+          location: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>',
+          download: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M5 21h14"></path></svg>'
+        };
+
+        return icons[type] || '';
+      }
+
+      function renderContact() {
+        const contact = data.contact;
+        const resume = data.resume || {};
+        const details = [
+          { key: 'phone', icon: 'phone', value: contact.phone },
+          { key: 'email', icon: 'email', value: contact.email },
+          { key: 'location', icon: 'location', value: contact.location }
+        ].filter(function (item) {
+          return item.value;
+        });
+
+        const detailMarkup = details.map(function (item) {
+          const href = contactHref(item.key, item.value);
+          const valueMarkup = href
+            ? `<a href="${escapeHtml(href)}">${escapeHtml(item.value)}</a>`
+            : `<span>${escapeHtml(item.value)}</span>`;
+
+          return `
+            <li>
+              <span class="contact-line-icon">${contactIcon(item.icon)}</span>
+              ${valueMarkup}
+            </li>
+          `;
+        }).join('');
+
+        const resumeFile = resume.file || '';
+        const resumeName = resume.filename || `${data.hero.name}-个人简历.pdf`;
+        const downloadMarkup = resumeFile
+          ? `<a class="download-pill" href="${escapeHtml(resumeFile)}" download="${escapeHtml(resumeName)}">${contactIcon('download')}下载完整简历 (PDF)</a>`
+          : '';
+
+        document.getElementById('contact-panel').innerHTML = `
+          <article class="contact-info-card fade-target">
+            <h3>联系方式</h3>
+            <ul class="contact-lines">${detailMarkup}</ul>
+          </article>
+          <article class="contact-download-card fade-target">
+            <h3>准备好了解我了吗？</h3>
+            <p>简历里有更详细的经历和数据。</p>
+            ${downloadMarkup}
+          </article>
+        `;
+      }
+
+      function renderFooter() {
+        const year = new Date().getFullYear();
+        document.getElementById('footer-copy').textContent = `© ${year} ${data.hero.name}. All rights reserved.`;
+      }
+
+      function initRevealAnimations() {
+        const targets = Array.from(document.querySelectorAll('.fade-target'));
+
+        if (!('IntersectionObserver' in window)) {
+          targets.forEach(function (target) {
+            target.classList.add('is-visible');
+          });
+          return;
+        }
+
+        const observer = new IntersectionObserver(function (entries, currentObserver) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              currentObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.16,
+          rootMargin: '0px 0px -80px 0px'
+        });
+
+        targets.forEach(function (target) {
+          observer.observe(target);
+        });
+      }
+
+      function initProjectTilt() {
+        document.querySelectorAll('.project-card').forEach(function (card) {
+          const tilt = card.querySelector('.project-card-tilt');
+
+          card.addEventListener('mousemove', function (event) {
+            const rect = card.getBoundingClientRect();
+            const offsetX = event.clientX - rect.left;
+            const offsetY = event.clientY - rect.top;
+            const rotateY = ((offsetX / rect.width) - 0.5) * 16;
+            const rotateX = ((0.5 - (offsetY / rect.height)) * 16);
+            tilt.style.transform = `perspective(900px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-6px)`;
+          });
+
+          card.addEventListener('mouseleave', function () {
+            tilt.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)';
+          });
+        });
+      }
+
+      function setActiveNav(id) {
+        navLinks.forEach(function (link) {
+          link.classList.toggle('is-active', link.dataset.section === id);
+        });
+      }
+
+      function initSectionObserver() {
+        if (!('IntersectionObserver' in window)) {
+          return;
+        }
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              setActiveNav(entry.target.id);
+            }
+          });
+        }, {
+          threshold: 0.2,
+          rootMargin: '-38% 0px -52% 0px'
+        });
+
+        sections.forEach(function (section) {
+          observer.observe(section);
+        });
+      }
+
+      function updateHeaderState() {
+        const hero = document.getElementById('home');
+        const beyondHero = hero.getBoundingClientRect().bottom <= header.offsetHeight + 8;
+        header.classList.toggle('is-scrolled', beyondHero);
+      }
+
+      function initNavigation() {
+        navToggle.addEventListener('click', function () {
+          const isOpen = header.classList.toggle('nav-open');
+          navToggle.setAttribute('aria-expanded', String(isOpen));
+          navToggle.setAttribute('aria-label', isOpen ? '关闭导航菜单' : '打开导航菜单');
+        });
+
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            header.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', '打开导航菜单');
+          });
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape') {
+            header.classList.remove('nav-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', '打开导航菜单');
+          }
+        });
+
+        updateHeaderState();
+        window.addEventListener('scroll', updateHeaderState, { passive: true });
+        window.addEventListener('resize', updateHeaderState);
+      }
+
+      function init() {
+        updateSeo();
+        renderHero();
+        renderSummary();
+        renderProjects();
+        renderExperience();
+        renderContact();
+        renderFooter();
+        initNavigation();
+        initRevealAnimations();
+        initProjectTilt();
+        initSectionObserver();
+      }
+
+      init();
+    })();
+  </script>
+</body>
+</html>
