@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=hero-typography">
+  <link rel="stylesheet" href="style.css?v=contact-card-align">
 </head>
 <body>
   <header class="site-header" id="site-header">
@@ -354,16 +354,33 @@
         const downloadMarkup = resumeFile
           ? `<a class="download-pill" href="${escapeHtml(resumeFile)}" download="${escapeHtml(resumeName)}">${contactIcon('download')}下载完整简历 (PDF)</a>`
           : '';
+        const hobbySiteUrl = 'https://ovekirito.github.io/sheying-web-ui/';
+        const hobbyQr = 'assets/sheying-website-qr.png';
 
         document.getElementById('contact-panel').innerHTML = `
           <article class="contact-info-card fade-target">
-            <h3>联系方式</h3>
+            <div class="contact-card-heading">
+              <h3>联系方式</h3>
+            </div>
             <ul class="contact-lines">${detailMarkup}</ul>
           </article>
           <article class="contact-download-card fade-target">
-            <h3>准备好了解我了吗？</h3>
+            <div class="contact-card-heading">
+              <h3>完整简历</h3>
+            </div>
             <p>简历里有更详细的经历和数据。</p>
             ${downloadMarkup}
+          </article>
+          <article class="contact-hobby-card fade-target">
+            <div class="hobby-card-copy">
+              <div class="contact-card-heading">
+                <h3>兴趣爱好</h3>
+              </div>
+              <a class="hobby-site-link" href="${escapeHtml(hobbySiteUrl)}" target="_blank" rel="noopener">Beyond Work</a>
+            </div>
+            <a class="hobby-qr-link" href="${escapeHtml(hobbySiteUrl)}" target="_blank" rel="noopener" aria-label="打开摄影网站">
+              <img src="${escapeHtml(hobbyQr)}" alt="摄影网站二维码">
+            </a>
           </article>
         `;
       }

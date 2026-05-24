@@ -976,19 +976,21 @@ button {
 
 .contact-panel {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
   align-items: stretch;
 }
 
 .contact-info-card,
-.contact-download-card {
+.contact-download-card,
+.contact-hobby-card {
   min-height: 246px;
   border-radius: 22px;
   transition: transform 260ms var(--ease), box-shadow 260ms var(--ease);
 }
 
-.contact-info-card {
+.contact-info-card,
+.contact-hobby-card {
   padding: 40px;
   border: 1px solid rgba(92, 64, 51, 0.12);
   background: var(--white);
@@ -996,15 +998,35 @@ button {
 }
 
 .contact-info-card:hover,
-.contact-download-card:hover {
+.contact-download-card:hover,
+.contact-hobby-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-strong);
 }
 
-.contact-info-card h3,
-.contact-download-card h3 {
+.contact-card-heading {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-height: 48px;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+}
+
+.contact-card-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 54px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.contact-card-heading h3 {
   margin: 0;
-  font-size: 1.28rem;
+  font-size: 1.3rem;
   line-height: 1.35;
   font-weight: 900;
 }
@@ -1014,7 +1036,7 @@ button {
   flex-wrap: wrap;
   gap: 14px;
   padding: 0;
-  margin: 24px 0 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -1061,13 +1083,17 @@ button {
   box-shadow: 0 14px 34px rgba(92, 64, 51, 0.12);
 }
 
-.contact-download-card h3 {
+.contact-download-card .contact-card-heading h3 {
   color: var(--white);
+}
+
+.contact-download-card .contact-card-heading::after {
+  background: linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0.46));
 }
 
 .contact-download-card p {
   max-width: 520px;
-  margin: 18px 0 26px;
+  margin: 0 0 26px;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 700;
 }
@@ -1095,6 +1121,63 @@ button {
   color: var(--white);
   background: var(--primary);
   transform: translateY(-2px);
+}
+
+.contact-hobby-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 126px;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.hobby-card-copy {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-hobby-card p {
+  margin: 18px 0 22px;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.hobby-site-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 118px;
+  min-height: 34px;
+  margin-top: 4px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1;
+  transition: transform 240ms var(--ease), box-shadow 240ms var(--ease);
+}
+
+.hobby-site-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(224, 122, 95, 0.22);
+}
+
+.hobby-qr-link {
+  display: block;
+  align-self: center;
+  padding: 10px;
+  border-radius: 18px;
+  background: var(--card);
+}
+
+.hobby-qr-link img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .site-footer {
@@ -1174,6 +1257,14 @@ button {
 
   .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-hobby-card {
+    grid-column: 1 / -1;
   }
 
   .timeline::before {
@@ -1396,10 +1487,19 @@ button {
   }
 
   .contact-info-card,
-  .contact-download-card {
+  .contact-download-card,
+  .contact-hobby-card {
     min-height: 0;
     padding: 28px;
     border-radius: 18px;
+  }
+
+  .contact-hobby-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hobby-qr-link {
+    width: min(160px, 100%);
   }
 
   .contact-lines {
